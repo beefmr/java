@@ -44,10 +44,10 @@ public class Main {
     public static int exponentialSearch(int[] array, int target) {
         // Проверка на пустой массив
         if (array.length == 0) {
-            return -1; // Если массив пустой, элемент не найден
+            return -1; // Если массив пустой, элемент не найден.
         }
 
-        // Если первый элемент является искомым
+        // Если первый элемент является искомым.
         if (array[0] == target) {
             return 0;
         }
@@ -58,7 +58,7 @@ public class Main {
             i *= 2; // Удваиваем индекс
         }
 
-        // Выполнение бинарного поиска в найденном диапазоне
+        // Выполнение бинарного поиска в найденном диапазоне.
         return binarySearch(array, target, i / 2, Math.min(i, array.length - 1));
     }
 
@@ -71,11 +71,11 @@ public class Main {
                 return mid; // Элемент найден
             }
             if (array[mid] < target) {
-                left = mid + 1; // Ищем в правой половине
+                left = mid + 1; // Ищем в правой половине.
             } else {
-                right = mid - 1; // Ищем в левой половине
+                right = mid - 1; // Ищем в левой половине.
             }
         }
-        return -1; // Элемент не найден
+        return -1; // Элемент не найден.
     }
 }
